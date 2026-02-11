@@ -101,11 +101,15 @@
 
 /* Container do Carrossel */
 .carousel-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 60px 1fr 60px;
+    grid-template-rows: auto auto;
+    align-items: start;
+    justify-items: center;
     gap: 20px;
-    min-height: 400px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 /* Botões do Carrossel */
@@ -134,11 +138,24 @@
     transform: scale(0.95);
 }
 
+.prev-btn {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: center;
+}
+
+.next-btn {
+    grid-column: 3;
+    grid-row: 2;
+    align-self: center;
+}
+
 /* Foto do Carrossel */
 .carousel-photo {
-    flex: 1;
+    grid-column: 1 / -1;
     max-width: 500px;
     text-align: center;
+    width: 100%;
 }
 
 .photo {
@@ -321,9 +338,11 @@
     }
 
     .carousel-container {
+        display: flex;
         flex-wrap: wrap;
         gap: 15px;
         min-height: auto;
+        justify-content: center;
     }
 
     .carousel-photo {
@@ -394,8 +413,10 @@
     }
 
     .carousel-container {
+        display: flex;
         gap: 10px;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     .carousel-photo {

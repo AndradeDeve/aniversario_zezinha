@@ -4,7 +4,10 @@ import namoro from "../../assets/namoro.png";
 import zezinha_cabelo from "../../assets/zezinha_cabelo.png";
 import zezinha_social from "../../assets/zezinha_social.png";
 import zezinha_moletom from "../../assets/zezinha_moletom.png";
+import rivalidade from "../../assets/rivalidade.png";
+import Primeira_foto from "../../assets/Primeira_foto.png";
 import zezinha_com_rapariga from "../../assets/zezinha_com_rapariga.jpeg";
+import Player from "../Player/Index";
 
 function Home() {
     const [currentPhoto, setCurrentPhoto] = useState(0);
@@ -40,6 +43,16 @@ function Home() {
             id: 5,
             url: zezinha_com_rapariga,
             caption: "Meu amor e a Rapariga, do jeitinho que eu amo ✨"
+        },
+        {
+            id: 6,
+            url: rivalidade,
+            caption: "O unico defeito dala é o time que torce 🐷"
+        },
+        {
+            id: 7,
+            url: Primeira_foto,
+            caption: "Como dizia 2zDinizz: 'Posso não ser o primeiro, mas não vou ser mais um'"
         }
     ];
 
@@ -64,7 +77,7 @@ function Home() {
             
             setTimeElapsed({ days, hours, minutes, seconds });
         };
-
+        
         calculateTime();
         const timer = setInterval(calculateTime, 1000);
 
@@ -81,6 +94,7 @@ function Home() {
 
     return (
         <div className="home-container">
+            <Player />
             <div className="anniversary-content">
                 {/* Mensagem de Aniversário */}
                 <div className="message-section">

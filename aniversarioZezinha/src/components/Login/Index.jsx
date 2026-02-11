@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
+import musica from "../../assets/Rubi.mp3";
 
 function Login() {
     const [email, setEmail] = useState("");
@@ -18,6 +19,20 @@ function Login() {
         
         if (email === "gisely.celestino@etec.sp.gov.br" && password === "ADL$%pkv12") {
             setError("");
+            // Tocar música em loop imediatamente (em resposta ao clique)
+            try {
+                if (!window.__bgAudio) {
+                    const a = new Audio(musica);
+                    a.loop = true;
+                    // armazenar globalmente para persistir entre rotas
+                    window.__bgAudio = a;
+                }
+                // tentar tocar; navegadores permitem play em resposta direta a interação do usuário
+                window.__bgAudio.play().catch((err) => console.warn("Play bloqueado:", err));
+            } catch (err) {
+                console.warn("Erro ao tentar iniciar áudio:", err);
+            }
+
             navigate("/Home");
         } else {
             setError("Errou zezinha??????????????? 🥲");

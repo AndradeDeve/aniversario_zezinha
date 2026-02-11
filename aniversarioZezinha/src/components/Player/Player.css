@@ -1,0 +1,41 @@
+/* Player fixed bar at top of viewport */
+.player-root {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	z-index: 9999;
+	pointer-events: none; /* allow clicks through except inner */
+}
+
+.player-inner {
+	margin: 8px;
+	background: rgba(0, 0, 0, 0.92);
+	backdrop-filter: blur(6px);
+	border-radius: 12px;
+	padding: 6px 12px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+	pointer-events: auto;
+}
+
+.player-audio {
+	height: 36px;
+}
+
+.player-button {
+	background: linear-gradient(90deg,#ff9ccf,#ff7ab6);
+	border: none;
+	color: #fff;
+	padding: 6px 10px;
+	border-radius: 8px;
+	cursor: pointer;
+	font-weight: 600;
+}
+
+.player-button:hover { transform: translateY(-1px); }
+
