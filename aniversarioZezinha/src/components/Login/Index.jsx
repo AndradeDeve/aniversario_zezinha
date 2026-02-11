@@ -81,7 +81,7 @@ function Login() {
                     {error && <p className="error-message">{error}</p>}
 
                     <button type="submit" className="login-button">
-                        Entrar com Amor 💕
+                        Entrar
                     </button>
                 </form>
 
