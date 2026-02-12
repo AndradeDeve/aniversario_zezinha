@@ -111,7 +111,7 @@ function Home() {
                         Que esse novo ano venha cheio de coisas boas, sonhos realizados e muitos momentos felizes e que eu possa estar ao seu lado em todos eles, cuidando de você do jeito que você merece.
 
                         Feliz aniversário, meu amor.
-                        Eu te amo mais do que consigo colocar em palavras. 💙
+                        Eu te amo mais do que consigo colocar em palavras.
                     </p>
                     <p className="signature">Com todo meu amor 💗</p>
                 </div>
