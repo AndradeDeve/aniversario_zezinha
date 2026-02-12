@@ -52,7 +52,7 @@ function Home() {
         {
             id: 7,
             url: Primeira_foto,
-            caption: "Como dizia 2zDinizz: 'Posso não ser o primeiro, mas não vou ser mais um'"
+            caption: "Como dizia 2zDinizz: 'Posso não ser o primeiro, mas não vou ser só mais um'"
         }
     ];
 
